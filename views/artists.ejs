@@ -1,0 +1,12 @@
+<section>
+  <% artists.forEach((artist) => { %>
+    <article>
+
+      <!-- <res.render('artist', { title: 'Artists' }); -->
+
+      <%- include('artist', { artist: artist}) -%>
+      <article>
+    <% }) %>
+      </section>
+
+  })

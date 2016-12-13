@@ -11,7 +11,8 @@ router.get('/artists/:name', function(req, res, next) {
   const { name } = req.params;
   spotifyAPI.searchArtists(name)
     .then((artists)=> {
-      res.json(artists);
+      res.render('artists', {artists: artists});
+      //res.json(artists);
     })
     .catch(next);
 
